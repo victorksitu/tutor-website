@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {{
 
     toggleButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
+        if (toggleButton.ariaExpanded == 'true') {
+            toggleButton.ariaExpanded = 'false';
+        } else {
+            toggleButton.ariaExpanded = 'true';
+        }
+        console.log(toggleButton.ariaExpanded);
     })
 
     mobileMenu.addEventListener('click', function() {
